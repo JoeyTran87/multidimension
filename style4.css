@@ -1,0 +1,76 @@
+/* CSS for tree panels container */
+.tree-panels-container {
+    display: flex; /* Sắp xếp các panel theo hướng ngang */
+    flex-wrap: wrap; /* Cho phép các panel tự động chuyển dòng khi cần thiết */
+    width: 100%; /* Chiều rộng 100% màn hình */
+    height: 100vh; /* Chiều cao 100% chiều cao màn hình */
+    margin: 0; /* Xóa khoảng trống mặc định */
+}
+
+/* CSS for tree panels */
+.tree-panel {
+    width: 30%; /* Chiều rộng tối đa 30% màn hình */
+    flex-grow: 1; /* Mở rộng để lấp đầy khoảng trống còn lại trong dòng hiện tại */
+    min-height: 100vh; /* Chiều cao tối thiểu 100% chiều cao màn hình */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0; /* Xóa khoảng trống mặc định */
+    position: relative; /* Vị trí tương đối để định vị panel title */
+}
+
+/* CSS for panel title */
+.panel-title {
+    position: absolute; /* Vị trí tuyệt đối để định vị panel title */
+    top: 0; /* Đặt panel title ở đầu panel */
+    left: 0; /* Đặt panel title ở bên trái panel */
+    width: 100%; /* Chiều rộng 100% panel */
+    background-color: #f0f0f0; /* Màu nền panel title */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* CSS for horizontal and vertical sliders */
+.horizontal-slider,
+.vertical-slider {
+    position: absolute; /* Vị trí tuyệt đối để định vị slider */
+    top: 0; /* Đặt slider ở đầu panel */
+    right: 0; /* Đặt slider ở bên phải panel */
+    width: 10px; /* Chiều rộng slider */
+    height: 100%; /* Chiều cao 100% panel */
+    background-color: #ccc; /* Màu nền slider */
+    cursor: pointer; /* Con trỏ chuột thành dạng con trỏ khi di chuột qua */
+}
+
+.vertical-slider {
+    width: 100%; /* Chiều rộng 100% panel */
+    height: 10px; /* Chiều cao slider */
+    top: auto; /* Đặt slider ở dưới panel */
+    bottom: 0; /* Đặt slider ở dưới panel */
+}
+
+/* CSS for adding new panel */
+.new-panel {
+    width: 30%; /* Chiều rộng tối đa 30% màn hình */
+    flex-grow: 1; /* Mở rộng để lấp đầy khoảng trống còn lại trong dòng hiện tại */
+    min-height: 100vh; /* Chiều cao tối thiểu 100% chiều cao màn hình */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0; /* Xóa khoảng trống mặc định */
+    position: relative; /* Vị trí tương đối để định vị panel title */
+    display: none; /* Ẩn panel mới khi mặc định */
+}
+
+/* CSS for adding new panel button */
+.add-panel-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: fixed; /* Đặt vị trí cố định trên màn hình */
+    top: 10px; /* Khoảng cách 10px từ cạnh trên */
+    left: 10px; /* Khoảng cách 10px từ cạnh trái */
+    z-index: 100; /* Hiển thị nút phía trên các panel */
+}
+.panel-content {
+    max-height: 80vh; /* Set a maximum height of 80% viewport height */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
+}
